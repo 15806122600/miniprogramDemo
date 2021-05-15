@@ -1,0 +1,7 @@
+.ec-canvas {
+  width: 100%;
+  height: calc(100vh - 570rpx);
+  /* margin-left: 0.5%; */
+  background-color: #EEF1F6;
+  /* border: 1px solid black; */
+}
