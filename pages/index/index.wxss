@@ -1,18 +1,8 @@
-@import '../../app.wxss';
-@import '../../pages/cloth.wxss';
-
-.right {
-  width: 80%;
-  height: 100%;
-}
-
-.radio-item {
-  margin-bottom: 10px;
-}
-
-.lb {
-  word-break: break-all;
-}
-.content{
-  background-color: white;
+.avatar {
+  width: 140rpx;
+  height: 140rpx;
+  margin: 20rpx;
+  margin-top: 30rpx;
+  border-radius: 20rpx;
+  overflow: hidden;
 }

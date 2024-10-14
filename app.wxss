@@ -1,20 +1,42 @@
-page {
+@import "/templates/search-template/search-template.wxss";
+@import "/templates/comment-template/comment-template.wxss";
+@import "/style/tools.wxss";
+@import "/colorui/animation.wxss";
+@import "/colorui/main.wxss";
+@import "/colorui/icon.wxss";
+
+page{
+  height:100%;
   font-size: 14px;
-  background: #eee;
+  /* background: #eee; */
   color: #444;
 }
-.flex-wrap {
-  flex-wrap: wrap;
-}/**app.wxss**/
-
 .container {
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  padding: 200rpx 0;
+  /* justify-content: space-between; */
+  padding:0;
+  /* padding: 200rpx 0; */
   box-sizing: border-box;
+  background:#f2f2f5;
+  font-size: 12px;
+} 
+.error-icon{
+    width: 1.4rem;
+    height: 1.4rem;
+}
+
+.m-container {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
 }
 
 .containerOne {
@@ -23,7 +45,6 @@ page {
   bottom: 0;
   left: 0;
   right: 0;
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -344,5 +365,19 @@ scroll-view {
   background-color:#45D9FD ;
   color: #45D9FD;
 }
+/* 电子签名控件样式 */
+.item {
+  width: 100%;
+  display: flex;
+  min-height: 70px;
+}
 
+.label{
+  flex-shrink: 0;
+  width: 60px;
+}
 
+.content {
+  flex-grow: 1;
+  padding: 3px;
+}

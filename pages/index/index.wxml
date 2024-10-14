@@ -1,78 +1,36 @@
-<!-- <import src="/components/wxParse/wxParse.wxml"/> 
+<!-- <view class="container">
+   <v-language />
+  <text>{{content.text1}}</text>
+  <text>{{content.text2}}</text>
+  <text>{{content.text3}}</text> 
+ <button bindtap="getUserProfile">获取用户信息</button>
+  <view style="height: 10px;"></view>
 
-<view class="echart_panel" style="width:100%;display:none;">
-  <ec-canvas id="mychart" canvas-id="mychart-line" ec="{{ ec }}"></ec-canvas>
-</view>
-
-<view class="wxParse" style="display:none;">
-  <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
-</view>
--->
-<view class="flex-column" style="height:100%;">
-  <view class="flex-content">
-    <scroll-view scroll-y>
-      <view wx:if="{{ModelList.length===0}}" class="nodata">暂无数据</view>
-      <view wx:for="{{ModelList}}" wx:key="MPID">
-        <van-panel use-footer-slot="{{false}}">
-          <van-cell slot="header" title="工单编号：{{item.MPNo}}" is-link bind:tap="toDetail" data-index="{{index}}"></van-cell>
-          <view class="content">
-            <view class="flex-row">
-              <view>工单日期：</view>
-              <view class="flex-content blue">{{item.MPDate}}</view>
-            </view>
-            <view class="flex-row">
-              <view>客户名称：</view>
-              <view class="flex-content blue">{{item.StockCustName}}</view>
-            </view>
-
-            <view class="flex-row" style="flex-wrap:wrap;">
-              <view class="field-item">
-                <view>品名：</view>
-                <view class="flex-content blue lb">{{item.Prd_Name}}</view>
-              </view>
-              <view class="field-item">
-                <view>规格：</view>
-                <view class="flex-content blue lb">{{item.SpecName}}</view>
-              </view>
-              <view class="field-item">
-                <view>批号：</view>
-                <view class="flex-content blue lb">{{item.BatchNo}}</view>
-              </view>
-              <view class="field-item" wx:if="{{FieldConfig.IsShowCWidth==1}}">
-                <view>门幅：</view>
-                <view class="flex-content blue lb">{{item.CWidth}}</view>
-              </view>
-              <view class="field-item" wx:if="{{FieldConfig.IsShowCWeight==1}}">
-                <view>克重：</view>
-                <view class="flex-content blue lb">{{item.CWeight}}</view>
-              </view>
-              <view class="field-item" wx:if="{{FieldConfig.IsShowCMaoGao==1}}">
-                <view>毛高：</view>
-                <view class="flex-content blue lb">{{item.CMaoGao}}</view>
-              </view>
-            </view>
-
-            <view class="flex-row">
-              <view>需求量：</view>
-              <view class="flex-content blue">{{item.WorkWeight}}</view>
-            </view>
-
-            <view class="flex-row">
-              <view>打卷要求：</view>
-              <view class="flex-content blue">{{item.MakeRequire}}</view>
-            </view>
-
-            <view class="flex-row">
-              <view>适用机台：</view>
-              <view class="flex-content blue" wx:if="{{item.IsALLMachine}}">适用所有机台</view>
-              <view class="flex-content blue lb" wx:else>{{item.MachineNoStr}}</view>
+  <form bindsubmit="updateUserInfo">
+    <view class="cu-form-group">
+      <button class="avatar-wrapper" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
+        <image class="avatar" src="{{avatarUrl}}"></image>
+      </button>
+      <view class="title">昵称：</view>
+      <input placeholder="请输入昵称" type="nickname" name="nickname" maxlength="32"></input>
+    </view>
+    <view class="up-bt">
+      <button class="save-bt cu-btn block bg-blue margin-tb-sm lg white" form-type="submit" role="button" aria-disabled="false">更新资料</button>
+    </view>
+  </form>
+  <button class="save-bt cu-btn block bg-blue margin-tb-sm lg white" bindtap="goEcharts" role="button" aria-disabled="false">图表横屏展示</button>
+  <van-uploader file-list="{{ fileList }}" bind:after-read="afterRead" multiple="true"/>
+  <block wx:if="{{ImageList.length>0}}">
+    <view class="cu-list menu sm-border card-menu">
+      <view class="cu-item">
+        <view class="content top">
+          <view class="grid flex-sub col-6 grid-square">
+            <view wx:for="{{ImageList}}" wx:key="index" class="bg-img">
+              <van-image fit="fill" width="45" height="45" src="{{item.url}}" data-url="{{item.url}}" bind:click="onPreviewImage" />
             </view>
           </view>
-
-        </van-panel>
-        <view style="height:5px;"></view>
+        </view>
       </view>
-
-    </scroll-view>
-  </view>
-</view>
+    </view>
+  </block>
+</view> -->

@@ -30,4 +30,5 @@ Page({
       template: new Card().palette(),
     });
   },
+
 });

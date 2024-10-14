@@ -1,7 +1,0 @@
-.ec-canvas {
-  width: 99%;
-  height: 500rpx;
-  margin-left: 0.5%;
-  background-color:transparent;
-  /* border: 1px solid black; */
-}
