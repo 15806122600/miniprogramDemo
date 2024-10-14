@@ -1,0 +1,40 @@
+<view class="cu-form-group margin-top">
+  <view class="title">Socket地址：</view>
+  <input placeholder="websocket地址" value="{{wsAddr}}" disabled="{{linked?'disabled':''}}" bindinput="inputChange"></input>
+</view>
+<button bindtap="open" disabled="{{linked?'disabled':''}}">打开连接</button>
+<button bindtap="close" disabled="{{linked?'':'disabled'}}">关闭连接</button>
+<view class="cu-bar bg-white solid-bottom">
+  <view class="action">
+    <bolck wx:if="{{linked}}">
+      <text class="cuIcon-title text-blue"></text> 本地端：{{uuid}}
+    </bolck>
+    <block wx:else>
+      <text class="cuIcon-title text-blue"></text> 未连接
+    </block>
+  </view>
+</view>
+<view class="cu-bar bg-white solid-bottom">
+  <view class="action">
+    <text class="cuIcon-title text-blue"></text> 发送端：<input value="{{clientID}}" bindinput="inputChange2"/>
+  </view>
+</view>
+<view class="cu-bar bg-white solid-bottom">
+  <view class="action">
+    <text class="cuIcon-title text-blue"></text> 已选择：{{massage}}
+  </view>
+  <view class="action">
+    <text class="cuIcon-scan lg text-gray" bindtap="scanQRcode"></text>
+  </view>
+</view>
+<view class="grid col-3 padding-sm">
+  <view class="padding-sm" wx:for="{{ColorList}}" wx:key>
+    <view class="bg-{{item.name}} padding radius text-center shadow-blur" data-item="{{item}}" bindtap="selectColor">
+      <view class="text-lg">{{item.title}}</view>
+      <view class="margin-top-sm text-Abc">{{item.name}}</view>
+    </view>
+  </view>
+</view>
+<view class="padding">
+  <button class="cu-btn block bg-blue margin-tb-sm lg" type="" bindtap="sendMessage">发送消息</button>
+</view>

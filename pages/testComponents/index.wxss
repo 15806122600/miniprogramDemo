@@ -1,0 +1,91 @@
+
+@import '../../style/weui.wxss';
+@import '../../style/iconfont.wxss';
+
+/* 侧边过滤 **/
+.mr5 {
+  margin-right: 5px;
+  margin-top: 5px;
+}
+.pop-filter {
+  width: 80%;
+  height: 100%;
+  padding: 20px;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+.flex-content {
+  flex: 1;
+  overflow: hidden;
+}
+.mutiFilter{
+  margin-top: 20rpx;
+}
+.filter-title {
+  font-size: 28rpx;
+  color: #666;
+  line-height: 2em;
+  border-bottom: 1rpx solid #d9d9d9;
+  margin-bottom: 5px;
+}
+view {
+  overflow:visible
+}
+.boxx{
+  height: 96vh;
+  overflow: scroll;
+}
+.status{
+  width: 80%;
+  border-bottom: #e6e5e5 1rpx solid;
+  margin: 0 auto;
+  font-size: 30rpx;
+  margin-top: 40rpx;
+  line-height: 50rpx;
+  height: 60rpx;
+}
+.statusbox{
+  width: 480rpx;
+  display: flex;
+  flex-wrap: wrap;
+}
+.active{
+  min-width: 100rpx;
+  margin-top: 20rpx;
+  height: 40rpx;
+  text-align: center;
+  margin-right: 20rpx;
+  border: 4rpx solid rgb(214, 18, 18);
+  color: rgb(214, 18, 18);
+  border-radius: 6rpx;
+}
+.typesbox{
+  min-width: 100rpx;
+  margin-right: 20rpx;
+  text-align: center;
+  font-size: 26rpx;
+  border: 4rpx solid rgb(182, 182, 182);
+  color: #929191;
+  margin-top: 20rpx;
+  height: 40rpx;
+  border-radius: 6rpx;
+}
+.dialog-content{
+  height: 354px;
+  display: flex;
+  flex-direction: column;
+}
+::-webkit-scrollbar{
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+.autoWrap{
+  word-break: break-all;
+}

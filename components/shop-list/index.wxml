@@ -1,0 +1,22 @@
+<scroll-view class='content' scroll-y="true" style="height: {{second_height}}px;">
+  <block wx:for="{{items}}" wx:key="goods_name">
+    <view class = "button_item">
+      <button class="goods" hover-class="none">
+        <view class= "goods_head">
+          <image class="logo" src = "{{item.store_img_url}}"></image>
+          <text class="logo_name">{{item.store_name}}</text>
+        </view>
+        <view class="divLine"></view>
+        <image class="goods_logo" src = "{{item.goods_img_url}}"></image>
+        <text class="goods_name">{{item.goods_name}}</text>
+        <text class="introduce">{{item.introduce}}</text>
+        <text class="amount">¥{{item.sell_price}}</text>
+        <progress class = "goods_progress"  percent="{{item.saled_num}}" color = "#0cc22a" active = "true" ></progress>
+        <text class = "goods_progress_nums">{{item.saled_num}}</text>
+        <button class = "btn_goods" data-info="{{item}}" catchtap="_clickTap">
+          <text class = "buy">购买</text>
+        </button>
+      </button>
+    </view>
+  </block>
+</scroll-view>

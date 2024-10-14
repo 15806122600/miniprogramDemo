@@ -1,0 +1,11 @@
+.btn-group {
+  width: 100%;
+}
+
+.btn2 {
+  width: 100%;
+}
+
+.hover2 {
+  background: #ededed !important;
+}

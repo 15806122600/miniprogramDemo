@@ -1,0 +1,4 @@
+<date-period bind:prev="prev" bind:next="next" bind:changeDType="changeDType"></date-period>
+<view style="height: {{height}}px;">
+  <table-view header-row-class-name="header-class" row-class-name="row-class" cell-class-name="cell-class" headers="{{tableHeader}}" data="{{ row }}" stripe="{{ stripe }}" border="{{ border }}" no-data-msg="{{ msg }}" />
+</view>

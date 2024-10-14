@@ -1,0 +1,8 @@
+<view class="body">
+  <textarea maxlength="-1" bindinput="inputEvent" />  
+  <!-- <input type="number" value="1"  bindinput="inputNumsEvent" /> -->
+  <button type="primary" bindtap="sendData">发送打印数据</button>  
+  <view style="height:10rpx;" />
+  <button type="primary" bindtap="sendListData">发送打印清单</button>  
+  <button type='primary' bindtap='labelTest' loading='{{isLabelSend}}' disabled='{{isLabelSend}}'>标签测试</button>
+</view>

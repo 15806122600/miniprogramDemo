@@ -1,0 +1,7 @@
+<!--pages/Home/advertisement/advertisement.wxml-->
+<view class="container">
+  <!-- 　<image style="position:fixed;top:0;left:0;width:100%;height:100%;background:url('{{adImage}}') no-repeat #000;background-size:cover;z-index:-2;"/> -->
+　<image style="position:fixed;top:0;left:0;width:100%;height:100%;background:url('{{adImage}}') no-repeat #fff;background-size:cover;z-index:-1;"/>
+　<text bindtap="cliadv" wx:if="{{miao!=0}}">跳过广告 {{miao}}</text>
+  <view class="text2">权重：{{prob}} %</view>
+</view>

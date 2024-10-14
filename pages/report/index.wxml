@@ -1,0 +1,5 @@
+<block wx:if="{{reportList.length>0}}">
+  <block wx:for="{{reportList}}" wx:key="index">
+    <van-cell is-link title="{{item.reportName}}" link-type="navigateTo" url="{{item.reportUrl}}" />
+  </block>
+</block>

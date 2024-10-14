@@ -1,0 +1,6 @@
+<view style="display: flex;flex-direction: column;">
+  <van-button color="#7232dd" bindtap="live">获取视频号直播信息</van-button>
+  <van-button color="#7232dd" plain bindtap="liveNotice">获取视频号直播预告信息</van-button>
+  <van-button color="linear-gradient(to right, #4bb0ff, #6149f6)"  bindtap="reserveLive">预约视频号直播</van-button>
+  <van-button color="linear-gradient(to right, #4bb0ff, #6149f6)"  bindtap="openLive">打开视频号直播</van-button>
+</view>

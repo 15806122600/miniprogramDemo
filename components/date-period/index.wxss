@@ -1,0 +1,77 @@
+@import '/colorui/main.wxss';
+@import '/colorui/icon.wxss';
+
+page {
+  background-color: #f6f7f8;
+}
+.rui-icon {
+  display: inline-block;
+  width: 60rpx;
+  height: 60rpx;
+  position: absolute;
+}
+.rui-nav-box {
+  width: 100%;
+  font-size: 0;
+  /* padding: 20px 15px; */
+  padding: 20rpx 15rpx 0 15rpx;
+}
+.rui-nav-content {
+  /* display: inline-block;
+  overflow: hidden; */
+  display: flex;
+  justify-items: center;
+  flex-direction: row;
+  border: 1px solid #2B81FF;
+  border-radius: 2px;
+  color: #2B81FF;
+  font-size: 0;
+}
+.rui-nav-content view {
+  display: inline-block;
+  font-size: 28rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  width: 25%;
+  text-align: center;
+  border-right: 1px solid #2b81ff;
+}
+.rui-nav-content view:last-child {
+  border: none;
+}
+.rui-nav-content view.active {
+  background-color: #2B81FF;
+  color: #fff;
+}
+.rui-picker-box {
+  width: 55%;
+  height: 64rpx;
+  line-height: 64rpx;
+  background-color: #2B81FF;
+  font-size: 24rpx;
+  text-align: center;
+  border-radius: 2px;
+  overflow: hidden;
+  color: #fff;
+}
+.rui-picker {
+  display: inline-block;
+  font-size: 28rpx;
+  width: 40%;
+  height: 60rpx;
+  line-height: 60rpx;
+  color: #fff;
+}
+.subtitle{
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  padding: 10rpx 15rpx 20rpx 15rpx;
+}
+.padding{
+  padding: 0 10rpx;
+}
+.cu-btn{
+  width: 100%;
+  font-size: 28rpx;
+}

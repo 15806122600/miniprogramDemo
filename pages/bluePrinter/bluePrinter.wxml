@@ -1,0 +1,25 @@
+<!-- <button class="btn" type="primary" bindtap="startSearch" loading='{{isScanning}}'> 开始搜索 </button>
+<view wx:for="{{list}}" wx:for-item="item" wx:key="deviceId"
+      data-title="{{item.deviceId}}" 
+      data-name="{{item.name}}" 
+      data-advertisData="{{item.advertisServiceUUIDs}}" 
+      bindtap="bindViewTap">
+      <view class="name block">设备名称：{{item.name}}</view>
+      <view class="deviceId block">设备ID：{{item.deviceId}}</view>
+      <view class="item"></view>    
+</view>  -->
+
+<view class="pages">
+  <button class="printbtn" type="primary" bindtap="startSearch" loading='{{isScanning}}'> 开始搜索 </button>
+  <view class="device_list">
+    <view wx:for="{{list}}" wx:key="deviceId" wx:for-item="item"      
+      data-title="{{item.deviceId}}" 
+      data-name="{{item.name}}" 
+      data-advertisData="{{item.advertisServiceUUIDs}}" 
+      bindtap="bindViewTap" 
+      class="device_item">
+      <div class="deviceId">设备ID:{{item.deviceId}}</div>
+      <div class="name">设备名称:{{item.name}}</div>
+    </view>
+  </view>
+</view>

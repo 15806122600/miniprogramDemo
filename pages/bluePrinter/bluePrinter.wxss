@@ -1,0 +1,45 @@
+page {
+	background-color: #EDF0F5;
+}
+
+.pages {
+	margin: 20px;
+}
+
+.printbtn {
+	margin-top: 20px;
+	width: 100%;
+	height: 80rpx;
+	border-radius: 66rpx;
+	background-color: #42C1AC;
+	color: white;
+	text-align: center;
+	line-height: 80rpx;
+}
+
+.text{
+	margin-top: 20px;
+}
+
+.input{
+	background-color: #fff;
+	height: 80rpx;
+	margin-top: 20px;
+	padding: 10px;
+}
+
+
+.device_list {
+  margin: 20px 5px;
+  border-radius: 5px;
+  width: auto;
+}
+.device_item {
+  border: 1px solid #AAA;
+  padding: 10px;
+  color: #666;
+}
+
+.device_item div{
+	display: block;
+}

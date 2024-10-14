@@ -1,0 +1,11 @@
+<scroll-view scroll-y="true" style="height: {{maxHeight}};background-color: #fff;">
+  <tree-select nodes="{{nodes}}" checkeds="{{checkeds}}" maxHeight="{{maxHeight}}" bind:change="checkDept"></tree-select>
+</scroll-view>
+<!-- 底部按钮 -->
+<view class="cu-list menu sm-border btn-add">
+  <view class="cu-item">
+    <view class="padding flex btn-group">
+      <button class="cu-btn bg-blue round btn2" hover-class="hover2" bindtap="confirmDept">确认</button>
+    </view>
+  </view>
+</view>

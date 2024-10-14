@@ -1,0 +1,39 @@
+scroll-view {
+  box-sizing: border-box;
+}
+.data_body {
+  overflow: auto;
+  text-align: center;
+  color: #333333;
+  background-repeat: repeat;
+  background-color: #ffffff;
+  position: relative;
+}
+.charts-box {
+  width: 100%;
+  height: 300px;
+}
+/**
+  图表样式
+**/
+.charts {
+  width: 750rpx;
+  height: 600rpx;
+}
+.content {
+  padding-top: 10rpx;
+}
+
+.content .sum_operate {
+  padding: 0;
+}
+.content .sum_operate .title {
+  text-align: center;
+  margin-bottom: 1px;
+  font-size: 20px;
+}
+.split_line{
+	width: 100%;
+	height: 20rpx;
+	background-color: #F0F0F0;
+}

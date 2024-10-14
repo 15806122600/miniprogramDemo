@@ -1,0 +1,15 @@
+@import '../../style/iconfont.wxss';
+
+.float-tool-bar{
+  position: fixed;
+  display: flex;
+  z-index: 99999;
+}
+
+.icon{
+  background: #186EB6;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

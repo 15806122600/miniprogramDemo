@@ -1,0 +1,42 @@
+<view class="data_body">
+  <scroll-view scroll-y>
+    <view class="content">
+      <view class="sum_operate">
+        <text-block content="{{content}}"></text-block>
+      </view>
+      <view class="split_line"></view>
+
+      <view class="sum_operate">
+        <view class="title">报表1标题</view>
+        <view class="charts-box">
+          <qiun-wx-ucharts type="column" canvas2d="{{true}}" opts="{{opts}}" chartData="{{chartData}}" bindcomplete="complete" />
+        </view>
+      </view>
+      <view class="split_line"></view>
+
+      <view class="sum_operate">
+        <view class="title">报表2标题</view>
+        <view class="charts-box">
+          <qiun-wx-ucharts type="line" canvas2d="{{true}}" opts="{{opts}}" chartData="{{chartData}}" bindcomplete="complete" />
+        </view>
+      </view>
+      <view class="split_line"></view>
+
+      <view class="sum_operate">
+        <view class="title">报表3标题</view>
+        <view class="charts-box">
+          <qiun-wx-ucharts type="pie" canvas2d="{{true}}" opts="{{ringOpts}}" localdata="{{localData}}" bindcomplete="complete" />
+        </view>
+      </view>
+      <view class="split_line"></view>
+
+      <view class="sum_operate">
+        <view class="title">报表4标题</view>
+        <view class="charts-box">
+          <qiun-wx-ucharts type="area" canvas2d="{{true}}" opts="{{areaOpts}}" chartData="{{areaData}}" bindcomplete="complete" />
+        </view>
+      </view>
+
+    </view>
+  </scroll-view>
+</view>

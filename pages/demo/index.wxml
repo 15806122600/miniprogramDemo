@@ -1,0 +1,13 @@
+<!-- <scroll-view class="list">
+  <view wx:for="{{list}}" wx:key="{{index}}" class="item-back" style="background-color: white">
+    <view class="item" data-index="{{index}}" style="background-color: #e0ebaf;width:{{(index+1)/list.length*100}}%;">
+      <view class="name">{{item.name}}</view>
+      <view class="progress-bar">
+        <view class="progress" style="width:{{(index+1)/list.length*100}}%;">
+        </view>
+      </view>
+    </view>
+  </view>
+</scroll-view> -->
+
+<select-view data="{{ UserList }}" isShow="{{ true }}"  attr="desc" icon="url" bindselected="selected"></select-view> 

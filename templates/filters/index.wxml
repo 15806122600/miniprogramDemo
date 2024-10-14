@@ -1,0 +1,46 @@
+<template name="CustomSearch">
+  <view class="dropdown" style="display: flex;border-bottom: 1rpx solid rgb(220, 220, 220);box-shadow: 5rpx 2rpx 10rpx 5rpx rgb(219, 219, 219);">
+    <view class="left" style=" width: 30%;">
+      <van-dropdown-menu active-color="#1989fa">
+        <van-dropdown-item value="{{ optVal }}" options="{{ statType }}" bind:change='changeType' />
+      </van-dropdown-menu>
+    </view>
+    <view class="right" style=" width: 70%;">
+      <van-search value="{{ value }}" placeholder="请输入搜索关键词" use-action-slot bind:change="KeyWordSearch"></van-search>
+    </view>
+  </view>
+</template>
+
+<template name="DateFilter">
+<view class="mutiFilter">
+  <view class="filter-title">时间过滤</view>
+  <van-field value="{{ BeginDate }}" label="开始时间" placeholder="请选择开始时间" border="{{ true }}" bind:tap="selectBeginDate" readonly/>
+  <van-field value="{{ EndDate }}" label="结束时间" placeholder="请选择结束时间" border="{{ true }}" bind:tap="selectEndDate" readonly/>
+</view>
+  <!-- 开始时间弹框 -->
+  <van-popup show="{{PopupShow.Begin}}" position="bottom" bind:close="toggleBottomPopup">
+    <van-datetime-picker type="date" value="{{BeginDateTime}}" bind:cancel="toggleBottomPopup" bind:confirm="BeginDateConfirm" />
+  </van-popup>
+  <!-- 结束时间弹框 -->
+  <van-popup show="{{PopupShow.End}}" position="bottom" bind:close="toggleBottomPopup2">
+    <van-datetime-picker type="date" value="{{EndDateTime}}" bind:cancel="toggleBottomPopup2" bind:confirm="EndDateConfirm" />
+  </van-popup>
+</template>
+
+<template name="TagFilter">
+<view class="mutiFilter">
+  <view class="filter-title">状态过滤</view>
+  <view class="statusbox">
+      <view class="{{indexB == index ?'active':'typesbox'}}" wx:for="{{ TagArr }}" data-index="{{ index }}"
+      data-id="{{ item.ID }}" bindtap="tagClick">{{ item.StatName }}</view>
+  </view>
+</view>
+</template>
+
+<template name="CondFilter">
+<view class="mutiFilter">
+  <view class="filter-title">条件过滤</view>
+  <van-field class="autoWrap" value="{{ condVal }}" label="{{item.label}}" placeholder="请选择" 
+  border="{{ true }}" data-source="{{item.dataSource}}" bind:tap="{{item.eventName}}" readonly/>
+</view>
+</template>

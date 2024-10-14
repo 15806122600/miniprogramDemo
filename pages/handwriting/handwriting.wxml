@@ -1,0 +1,8 @@
+<!-- <view>{{latitude}},{{longitude}}</view>
+<view>{{addressContent}}</view> -->
+<view class='item'>
+  <view class='label'>电子签名:</view>
+  <view class='content'>
+    <handwriting bindOnComplete="onHnadwritingComplete" />
+  </view>
+</view>

@@ -1,0 +1,3 @@
+<view class="float-tool-bar" style="justify-content:space-between; width:{{width}}px;height:{{height}}px;flex-direction:{{direction=='vertical'?'column':'row'}};{{center?'left:'+centerX+'px;':'left:'+left+';right:'+right+';'}}{{vcenter?'top:'+centerY+'px;':'top:'+top+';bottom:'+bottom+';'}}">
+  <view wx:key="*this" data-index="{{index}}" catchtap="_iconTap" wx:for="{{icons}}" class="iconfont icon-{{item}} icon" style="width:{{size}}px;height:{{size}}px;border-radius:{{size}}px;font-size:{{size-15}}px;background:{{background}};color:{{color}};"></view>
+</view>

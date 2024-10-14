@@ -1,0 +1,26 @@
+<!--选取时间段  -->
+<view class='rui-nav-box'>
+  <view class='rui-nav-content'>
+    <view bindtap='getDateType' data-datetype="0" class='{{dateType == 0 ? "active" : ""}}'>今日</view>
+    <view bindtap='getDateType' data-datetype="1" class='{{dateType == 1 ? "active" : ""}}'>本周</view>
+    <view bindtap='getDateType' data-datetype="2" class='{{dateType == 2 ? "active" : ""}}'>本月</view>
+    <!-- <view bindtap='getDateType' data-datetype="5" class='{{dateType == 5 ? "active" : ""}}'>本季</view> -->
+    <view bindtap='getDateType' data-datetype="3" class='{{dateType == 3 ? "active" : ""}}'>全年</view>
+  </view>
+</view>
+<view class='subtitle {{dateType == 4 ? "" : "rui-hide"}}'>
+  <!-- 向左切换时间 -->
+  <view class="padding flex flex-direction">
+    <button class="cu-btn bg-green md" bindtap="prev">上一个</button>
+  </view>
+  <view class='rui-picker-box'>
+    <!-- bindchange="bindDateChange" -->
+    <picker mode="date" class='rui-picker' value="{{startDate}}" start="2022-01-01" end="2200-12-31" id="start" disabled="true">{{startDate}}</picker> ~
+    <!-- bindchange="bindDateChange" -->
+    <picker mode="date" class='rui-picker' value="{{endDate}}" start="2022-01-01" end="2200-12-31" id="end" disabled="true">{{endDate}}</picker>
+  </view>
+  <!-- 向右切换时间 -->
+  <view class="padding flex flex-direction">
+    <button class="cu-btn bg-green md" bindtap="next">下一个</button>
+  </view>
+</view>

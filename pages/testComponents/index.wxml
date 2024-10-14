@@ -1,0 +1,34 @@
+<import src="../../templates/list/index.wxml" />
+<import src="../../templates/filters/index.wxml" />
+<view>
+  <template is="CustomSearch" data="{{optVal,statType}}"></template>
+  <template is='{{content}}' data="{{listData}}"></template>
+</view>
+
+<float-tool-bar icons="{{['filter']}}" bottom="24px" right="20px" bind:iconTap="iconTap"></float-tool-bar>
+<!-- 侧边过滤 -->
+<van-popup show="{{PopShow.Filter}}" custom-class="pop-filter flex-column" position="right" z-index="99999" bind:close="popFilterClose">
+  <view class="flex-content">
+    <block wx:if="{{compArr.length>0}}">
+      <block wx:for="{{compArr}}" wx:key="index">
+        <template is='{{item.compName}}' 
+          data="{{BeginDate,EndDate,BeginDateTime,EndDateTime,PopupShow,TagArr,indexB,item,condVal}}">
+        </template>
+      </block>
+      <kz-dialog wx:if="{{dialogShow}}" bind:onTap="closeDialog" actions="{{['取消']}}">
+          <view slot="content" class="dialog-content">
+            <template is="dialog-condition" data="{{condSearchVal,condData,condValID}}"></template>
+          </view>
+      </kz-dialog>
+    </block>
+  </view>
+  <view class="flex-row">
+    <view class="flex-content">
+      <van-button block catch:tap="doReset">重置</van-button>
+    </view>
+    <view class="flex-content">
+      <van-button block type="primary" catch:tap="doSearch">查询</van-button>
+    </view>
+  </view>
+  
+</van-popup>

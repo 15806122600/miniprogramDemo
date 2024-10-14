@@ -1,0 +1,3 @@
+<view class="bg-gradual-blue content shadow">
+  <uweather></uweather>
+</view>

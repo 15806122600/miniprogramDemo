@@ -1,0 +1,9 @@
+<scroll-view scroll-y="true" style="height: {{second_height}}px;">
+  <view class="item-wrap" wx:for="{{items}}" wx:key="index" catchtap="_clickTap" data-index="{{index}}" 
+  data-info="{{item}}">
+    <view class="item-text">{{item.text}}</view>
+    <view class="image-wrap">
+      <image class="item-image" src="{{item.image}}" mode="aspectFill"></image>
+    </view>
+  </view>
+</scroll-view>

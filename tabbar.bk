@@ -1,0 +1,38 @@
+  "tabBar": {
+    "color": "#7f8389",
+    "selectedColor": "#186EB6",
+    "borderStyle": "black",
+    "backgroundColor": "#f7f7fa",
+    "list": [
+      {
+        "selectedIconPath": "pages/nfc/image/read-selected.png",
+        "iconPath": "pages/nfc/image/read.png",
+        "pagePath": "pages/nfc/read/index",
+        "text": "读取"
+      },
+      {
+        "selectedIconPath": "pages/nfc/image/write-selected.png",
+        "iconPath": "pages/nfc/image/write.png",
+        "pagePath": "pages/nfc/write/index",
+        "text": "写入"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/selectHome.png"
+      },
+      {
+        "pagePath": "pages/dashboard/index",
+        "text": "看板",
+        "iconPath": "images/report.png",
+        "selectedIconPath": "images/selectReport.png"
+      },
+      {
+        "pagePath": "pages/report/index",
+        "text": "报表",
+        "iconPath": "images/function.png",
+        "selectedIconPath": "images/selectFunction.png"
+      }
+    ]
+  },

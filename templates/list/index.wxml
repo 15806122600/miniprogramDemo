@@ -1,0 +1,18 @@
+<template name="content-list">
+  <content-list items='{{listData}}' bind:clickTap="onClick"/>
+</template>
+
+<template name="shop-list">
+  <shop-list items='{{listData}}' bind:clickTap="onClick2"/>
+</template>
+
+<template name="dialog-condition">
+  <van-search value="{{ condSearchVal }}" placeholder="请输入搜索关键词" use-action-slot bind:change="condSearch"/>
+  <scroll-view scroll-y="true" style="height: 300px;" wx:if="{{condData.length>0}}">
+    <label class="weui-cell" wx:for="{{condData}}" wx:key="index" data-id="{{item.CustID}}" data-name="{{item.CustName}}"
+    bindtap="onSelected">
+      <view class="flex-content">{{item.CustName}}</view>
+      <icon type="success_no_circle" wx:if="{{item.CustID==condValID}}" size="16"></icon>
+    </label>
+  </scroll-view>
+</template>

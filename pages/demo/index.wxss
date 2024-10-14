@@ -1,0 +1,80 @@
+.list {
+  padding: 10rpx;
+}
+
+.item-back {
+  border: 1rpx solid #eee;
+  margin-bottom: 10rpx;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10rpx;
+}
+
+.name {
+  font-size: 28rpx;
+}
+
+.progress-bar {
+  width: 150rpx;
+  height: 20rpx;
+  background-color: #eee;
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background-color: #9acd32;
+  border-radius: 10rpx;
+}
+
+/** 电池进度条 */
+.btn{
+  background-color: #fff;
+  font-size: 16px;
+  height: 64px;
+  margin: 0 4.27% 2.94% 4.27%;
+  width: 94%;
+  border-radius: 20rpx;
+  padding-left: 3%;
+  display: flex;
+}
+
+.cu-progress{
+  width: 94%;
+  /* height: 90% !important; */
+  background-color: #15B7FF;
+  /* text-align: center; */
+  /* margin: 3% 3%; */
+  align-items: center;
+  display: block;
+}
+.progress_color{
+  display: block !important;
+  background-color: #ebeef5;
+  height: 100% !important;
+  align-items: center;
+  direction: rtl;
+}
+.item-Pro .item{
+  width: 8%;
+  height: 15%;
+  background-color: #15B7FF ;
+  align-items: center;
+}
+.item-Pro{
+  display: flex;
+  align-items: center;
+}
+
+.ProProgress{
+  width: 80rpx;
+  height: 40rpx;
+  align-items: center;
+  border: 2px solid #15B7FF;
+  border-radius: 2rpx;
+}

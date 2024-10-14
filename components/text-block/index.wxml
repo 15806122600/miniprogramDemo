@@ -1,0 +1,8 @@
+<view class="text_block">
+  <block wx:for="{{content}}" wx:key="index">
+    <view wx:if="{{item.kind == 1}}" style="background:linear-gradient(to top right,{{item.background[0]}},{{item.background[1]}})" class="{{(index+1)%6==0 ? 'kind kind_one breathe-blue':'marginRight kind kind_one breathe-blue'}}">
+      <view class="view_100" style="font-size:{{item.content[0].size}};color:{{item.content[0].colorvalue}}">{{item.content[0].value}}</view>
+      <view class="view_100" style="font-size:{{item.content[1].size}};color:{{item.content[1].colortext}}">{{item.content[1].text}}</view>
+    </view>
+  </block>
+</view>
