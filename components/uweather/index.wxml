@@ -45,10 +45,10 @@
     <view style="width:50%;height:100%;">
       <view class="title">
         <view class="text-cut" style="margin-top:20rpx;">{{obj.province}}-{{obj.city}}</view>
-        <!--view class="text-cut">湿度:{{obj.humidity.data}}</view-->
-        <view class="text-cut" style="margin-top:20rpx;">温度:{{obj.temperature}}℃</view>
-        <view class="text-cut" style="margin-top:20rpx;">天气:{{obj.weather}}</view>
-        <view class="text-cut" style="margin-top:20rpx;">{{obj.winddirection}}风{{obj.windpower}}级</view>
+        <view class="text-cut" style="margin-top:20rpx;">湿度 {{obj.humidity}}%</view>
+        <view class="text-cut" style="margin-top:20rpx;">温度 {{obj.temperature}}℃</view>
+        <view class="text-cut" style="margin-top:20rpx;">天气 {{obj.weather}}</view>
+        <view class="text-cut" style="margin-top:20rpx;">{{obj.winddirection}}风 {{obj.windpower}}级</view>
       </view>
     </view>
   </view>

@@ -1,12 +1,2 @@
-<view class="data_body">
-  <view class="content">
-    <view class="sum_operate">
-      <view class="title">当日机台速度报表</view>
-      <scroll-view>
-        <view class="charts-box" >
-          <qiun-wx-ucharts type="line" canvas2d="{{true}}" opts="{{opts}}" chartData="{{chartData}}" bindcomplete="complete" />
-        </view>
-      </scroll-view>
-    </view>
-  </view>
-</view>
+<!--pages/index/echarts/index.wxml-->
+<text>pages/index/echarts/index.wxml</text>

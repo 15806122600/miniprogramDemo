@@ -11,19 +11,19 @@ Page({
     adImage:'',
     advList:[
         {
-          "adImage":"https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fac-q.static.booking.cn%2Fimages%2Fhotel%2Fmax1024x768%2F111%2F111145520.jpg&refer=http%3A%2F%2Fac-q.static.booking.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1624689005&t=552b3ff6194ea327c632e7d95c1e859a",
+          "adImage":"https://mmbiz.qpic.cn/sz_mmbiz_jpg/SA7AShibibJibQZXPuhYRp7KGD2vX3EjUbt5fpbzbgbhIGGjp9nmHVUY6KqFHsia6cKDicKbG68TAFcnKq0FCC77Hdw/640?wx_fmt=jpeg&tp=wxpic&wxfrom=5&wx_lazy=1&wx_co=1",
           "prob":10.8
         },
         {
-          "adImage":"https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2F754601d80986bd88e7ee18d14dbd17aa3b78897b27565-YPQ5qp_fw658&refer=http%3A%2F%2Fhbimg.b0.upaiyun.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1624690437&t=70cf7b184524d27001e93f6aece09192",
+          "adImage":"https://mmbiz.qpic.cn/sz_mmbiz_jpg/SA7AShibibJibQZXPuhYRp7KGD2vX3EjUbtLl5Uu5W2eMBXalias9tscPoy8RXcC4atrk5CrjuicFsJx5Mdka7sHDEg/640?wx_fmt=jpeg&tp=wxpic&wxfrom=5&wx_lazy=1&wx_co=1",
           "prob":44.2
         },
         {
-          "adImage":"https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fwww.krabiandamantour.com%2Fimages%2Fkrabitour%2F4islands-koh-hong-by-speedboat%2Fkoh-tup-%28tup-Island%29-talay-waek-krabi-Islands-2.jpg&refer=http%3A%2F%2Fwww.krabiandamantour.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1624689005&t=c35e536f7079af145771bfc07b1ff14f",
+          "adImage":"https://mmbiz.qpic.cn/sz_mmbiz_jpg/SA7AShibibJibSfqm6VW11QsxROahwdtw0rcWicguuPA6icuV82b5ibpAsictVhQ5NibVI3M9yevrjY3BsQDbfmOZm7MGQ/640?wx_fmt=jpeg&tp=wxpic&wxfrom=5&wx_lazy=1&wx_co=1",
           "prob":20.5
         },
         {
-          "adImage":"https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fs.hougarden.com%2Fimage%2F89%2F02%2F890210803b28c0fb443892fd9b1e4686.jpg%3Fx-oss-process%3Dimage%2Fquality%2Cq_80%2Fresize%2Cw_1100&refer=http%3A%2F%2Fs.hougarden.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1624689005&t=39853b32023825cfdf3879d2772ca649",
+          "adImage":"https://mmbiz.qpic.cn/sz_mmbiz_jpg/SA7AShibibJibSNk73pfibMxh8SricVdgAvsxWYfiaGf2picztXj3kmvQDd2Q9rqnzlkkRSrOxjhhQtic1ic684Tjkgn13Q/640?wx_fmt=jpeg&tp=wxpic&wxfrom=5&wx_lazy=1&wx_co=1",
           "prob":24.5
       },
 
@@ -82,8 +82,8 @@ Page({
   　　　　 })
         }else{
         　clearInterval(that.time);
-          wx.navigateTo({
-            url: '../index/index',
+          wx.switchTab({
+            url: '../../index/index',
           })
         }
   　}, 1000);
@@ -91,8 +91,8 @@ Page({
 
   cliadv: function() {
 　　clearInterval(this.time)
-    wx.navigateTo({
-      url: '../index/index',
+    wx.switchTab({
+      url: '../../index/index',
     })
   },
 

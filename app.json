@@ -1,23 +1,26 @@
 {
   "pages": [
-    "pages/websocket/index",
+    
     "pages/index/index",
+    "pages/dashboard/index",
+    "pages/home/advertisement/advertisement",
+    "pages/nfc/write-list/index",
+    "pages/nfc/write/index",
+    "pages/nfc/read/index",
+
     "pages/index/echarts/index",
+    "pages/websocket/index",
     "pages/dept/index",
     "pages/demo/index",
-    "pages/weather/index",
     "pages/example/example",
     "pages/signature/signature",
     "pages/handwriting/handwriting",
-    "pages/nfc/read/index",
-    "pages/nfc/write/index",
-    "pages/nfc/write-list/index",
-    "pages/dashboard/index",
+   
     "pages/report/index",
-    "pages/home/advertisement/advertisement",
+    "pages/reportDetail/index",
+
     "pages/live/live",
     "pages/testComponents/index",
-    "pages/reportDetail/index",
     "pages/bluePrinter/bluePrinter",
     "pages/bluePrinter/startPrint"
     
@@ -39,6 +42,24 @@
         "text": "看板",
         "iconPath": "images/report.png",
         "selectedIconPath": "images/selectReport.png"
+      },
+      {
+        "selectedIconPath": "pages/nfc/image/read-selected.png",
+        "iconPath": "pages/nfc/image/read.png",
+        "pagePath": "pages/nfc/read/index",
+        "text": "读取"
+      },
+      {
+        "selectedIconPath": "pages/nfc/image/write-selected.png",
+        "iconPath": "pages/nfc/image/write.png",
+        "pagePath": "pages/nfc/write/index",
+        "text": "写入"
+      },
+      {
+        "pagePath": "pages/report/index",
+        "text": "报表",
+        "iconPath": "images/function.png",
+        "selectedIconPath": "images/selectFunction.png"
       }
     ]
   },
@@ -79,6 +100,10 @@
     "downloadFile": 10000
   },
   "sitemapLocation": "sitemap.json",
+  "requiredPrivateInfos": [
+    "getLocation",
+    "chooseLocation"
+  ],
   "permission": {
     "scope.userLocation": {
       "desc": "你的位置信息将用于定位效果和天气信息展示"

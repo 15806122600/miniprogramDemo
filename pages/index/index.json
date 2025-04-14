@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "v-language": "/components/language/language"
+    "v-language": "/components/language/language",
+    "towxml": "/towxml/towxml"
   }
 }

@@ -20,6 +20,9 @@ Page({
     avatarUrl: "",
     fileList: [],
     ImageList: [],
+    isLoading: true,
+    mdContent: {},
+    error: '',
   },
   onChooseAvatar(e) {
     const { avatarUrl } = e.detail 	//获取图片临时路径
@@ -40,6 +43,10 @@ Page({
     this.setData({
       content: wx.getStorageSync('content')
     })
+     // 从 URL 参数获取 Markdown 文件地址
+     const mdUrl = options.url || 'http://58.209.82.229:8500/web/#/124/944';
+     //var mdUrl = "http://58.209.82.229:8500/web/#/68/515"
+     this.loadMarkdown(mdUrl);
   },
 
   goEcharts() {
@@ -225,5 +232,100 @@ Page({
         this.setData({ ImageList });
       }
     })
-  }
+  },
+
+  async loadMarkdown(url) {
+    var _this = this
+    const cacheKey = `md_${encodeURIComponent(url)}`;
+    const cachedData = wx.getStorageSync(cacheKey);
+
+    if (cachedData) {
+      this.setData({ mdContent: cachedData, isLoading: false });
+      return;
+    }
+    
+    try {
+      var PageID = this.getLastHashParamMini(url)
+      // console.log(PageID)
+      var realUrl = "http://58.209.82.229:8500/server/index.php?s=/api/page/info"
+
+      var formData = {
+        page_id: PageID,
+        user_token: "e1ffd1e097980ca8d458cd1577a8dcc0b048417565d1d2dd358858d22d52a320"
+
+      }
+      // 发起网络请求
+      const res = await wx.request({
+        url: realUrl,
+        method: 'post',
+        data: formData,
+        timeout: 10000, // 10秒超时
+        success (res) {
+          var reps = _this.unescapeMarkdown(res.data.data.page_content)
+          console.log(reps)
+          _this.parseContent(reps)
+        },
+        fail (err) {
+          throw new Error(`请求失败 (${err})`);
+        }
+      });
+    } catch (err) {
+      this.setData({
+        error: '加载失败，请稍后重试',
+        isLoading: false
+      });
+      console.error('Markdown加载错误:', err);
+    }
+  },
+
+  parseContent(markdown) {
+    const parsedData = app.towxml(markdown, 'markdown', {
+      base: 'http://58.209.82.229:8500/Public/Uploads', // 资源基础路径（如图片）
+      theme: 'light', // 主题
+      events: { // 自定义事件（如链接点击）
+        tap: e => this.onTap(e)
+      }
+    });
+
+    this.setData({
+      mdContent: parsedData,
+      isLoading: false
+    });
+  },
+
+  // 处理元素点击事件
+  onTap(e) {
+    const { dataset } = e.currentTarget;
+    console.log(dataset)
+    if (dataset.href) {
+      wx.navigateTo({
+        url: `/pages/webview/webview?url=${encodeURIComponent(dataset.href)}`
+      });
+    }
+  },
+
+  getLastHashParamMini(baseUrl) {
+    // 步骤 1：分离 hash 部分
+    const hashPart = baseUrl.split('#')[1] || '';
+      
+    // 步骤 2：去除查询参数并分割路径
+    const [path] = hashPart.split('?');
+    const segments = path.split('/').filter(s => s !== '');
+    
+    // 步骤 3：返回最后一个有效参数
+    return segments.length > 0 ? segments.pop() : null;
+  },
+
+  unescapeMarkdown(str) {
+    const map = {
+      '&lt;': '<',
+      '&gt;': '>',
+      '&amp;': '&',
+      '&quot;': '"',
+      '&#39;': "'",
+      '&#x2F;': '/'
+    };
+    return str.replace(/&(lt|gt|amp|quot|#39|#x2F);/g, (m) => map[m]);
+  },
+
 })

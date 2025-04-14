@@ -57,7 +57,6 @@ Component({
         const firstArr = changeData.splice(0, 1);
         changeData = [...changeData, ...firstArr];
       }
-      console.log(changeData)
 
       this.setData({ list: changeData });
       Static.list = changeData;

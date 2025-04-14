@@ -55,12 +55,12 @@ App({
     this.checkPlatform()
 
    // 如果存在相关信息，连接websocket
-    if (this.globalData.socketStatus === 'closed') {
-      var url = "ws://192.168.1.15:8088/webSocket/"
-      this.openScoket(url);
-    }
+    // if (this.globalData.socketStatus === 'closed') {
+    //   var url = "ws://192.168.1.15:8088/webSocket/"
+    //   this.openScoket(url);
+    // }
   },
-
+  towxml:require('/towxml/index'),
   globalData: {
     systemInfo: {
       ...wx.getSystemInfoSync(),

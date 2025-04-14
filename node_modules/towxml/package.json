@@ -1,0 +1,58 @@
+{
+  "_from": "towxml@^3.0.6",
+  "_id": "towxml@3.0.6",
+  "_inBundle": false,
+  "_integrity": "sha512-AiEEyTYemk3xLlypfihR+vr/slyjvQZvZbGGXQdRklwYY8dbDEGUDopFwAtfW7tVkOc09rfZ7yu040vjJU84cw==",
+  "_location": "/towxml",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "towxml@^3.0.6",
+    "name": "towxml",
+    "escapedName": "towxml",
+    "rawSpec": "^3.0.6",
+    "saveSpec": null,
+    "fetchSpec": "^3.0.6"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmmirror.com/towxml/-/towxml-3.0.6.tgz",
+  "_shasum": "be779c5c51eb4bf014ab548d7889b1435246bc58",
+  "_spec": "towxml@^3.0.6",
+  "_where": "D:\\WXMiniProgram\\Demo-master",
+  "author": {
+    "name": "sbfkcel@163.com"
+  },
+  "bugs": {
+    "url": "https://github.com/sbfkcel/towxml/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "fs-extra": "^8.1.0"
+  },
+  "deprecated": false,
+  "description": "HTML、Markdown转WXML(WeiXin Markup Language)渲染库",
+  "homepage": "https://github.com/sbfkcel/towxml#readme",
+  "keywords": [
+    "html to wxml",
+    "markdown to wxml",
+    "html2wxml",
+    "mark2wxml",
+    "wxml"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "towxml",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sbfkcel/towxml.git"
+  },
+  "scripts": {
+    "build": "node build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "3.0.6"
+}

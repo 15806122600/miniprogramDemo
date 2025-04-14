@@ -6,3 +6,19 @@
   border-radius: 20rpx;
   overflow: hidden;
 }
+
+.container {
+  width: 100%;
+  height: auto;
+  padding: 4rpx;
+  word-wrap: break-word;
+}
+.loading, .error {
+  text-align: center;
+  color: #999;
+  padding: 40rpx;
+  font-size: 28rpx;
+}
+.error {
+  color: #ff4d4f;
+}

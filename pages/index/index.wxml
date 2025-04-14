@@ -1,3 +1,21 @@
+<!-- 天气 -->
+<!-- <view class="bg-gradual-blue content shadow">
+  <uweather></uweather>
+</view> -->
+
+<scroll-view class="container">
+  <!-- 加载状态提示 -->
+  <view wx:if="{{isLoading}}" class="loading">加载中...</view>
+  
+  <!-- 渲染Markdown内容 -->
+  <view wx:else>
+    <towxml nodes="{{mdContent}}"/>
+  </view>
+  
+  <!-- 错误提示 -->
+  <view wx:if="{{error}}" class="error">{{error}}</view>
+</scroll-view>
+
 <!-- <view class="container">
    <v-language />
   <text>{{content.text1}}</text>
